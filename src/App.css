@@ -28,11 +28,387 @@
   color: #61dafb;
 }
 
+/* home page styles */
+.logo {
+  color: #fff;
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.flex-row-sa {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-green {
+  min-height: 150px;
+  border: 3px solid #02b2027a;
+  border-radius: 5px;
+  padding: 15px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+}
+
+.box-red {
+  min-height: 150px;
+  border: 3px solid crimson;
+  border-radius: 5px;
+  padding: 15px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+}
+
+.box-grey {
+  min-height: 150px;
+  border: 3px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+}
+
+.box-red .overlay {
+  height: 0;
+  width: 0;
+  position: absolute;
+  opacity: 0.1;
+  transition: 0.5s;
+  bottom: 0;
+  left: 0;
+}
+
+.box-red:hover .overlay {
+  height: 100%;
+  width: 100%;
+  background-color: #e23c5c8c;
+}
+
+.box-green .overlay {
+  height: 0;
+  width: 0;
+  position: absolute;
+  opacity: 0.1;
+  transition: 0.5s;
+  bottom: 0;
+  left: 0;
+}
+
+.box-green:hover .overlay {
+  height: 100%;
+  width: 100%;
+  background-color: #06bb0682;
+}
+
+.box-grey .overlay {
+  height: 0;
+  width: 0;
+  position: absolute;
+  opacity: 0.1;
+  transition: 0.5s;
+  bottom: 0;
+  left: 0;
+}
+
+.box-grey:hover .overlay {
+  height: 100%;
+  width: 100%;
+  background-color: #aaa7a78a;
+}
+
+.box-heading {
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.box-stats {
+  font-size: 26px;
+  margin-bottom: 0;
+}
+
+.box-stats-up {
+  color: #01a601;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+.box-stats-up i {
+  font-size: 14px;
+}
+.box-stats-down {
+  color: crimson;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+.box-stats-down i {
+  font-size: 14px;
+}
+.red {
+  color: crimson;
+}
+
+.grey {
+  color: grey;
+}
+
+.green {
+  color: green;
+}
+
+.blue {
+  color: #007bff;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.page-heading {
+  text-align: center;
+  margin: 20px;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  display: flex;
+  justify-content: center;
+}
+
+.active-cases {
+  color: #007bff;
+  font-size: 24px;
+}
+
+.date {
+  margin-bottom: 25px;
+}
+
+.header-right {
+  position: absolute;
+  top: 0;
+  right: 15px;
+}
+
+.tracker-heading {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 17px;
+  background: #fff;
+  color: #021529;
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 2px solid #021529;
+  transition: 0.5s;
+}
+
+.tracker-heading:hover {
+  background: #021529;
+  color: #fff;
+  border-color: #fff;
+}
+.select-label {
+  font-size: 18px;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.fs-14 {
+  font-size: 14px !important;
+}
+
+.fs-10 {
+  font-size: 10px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+.ta-right {
+  text-align: right;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.loader {
+  font-size: 5px;
+  margin: 50px auto;
+  text-indent: -9999em;
+  width: 8em;
+  height: 8em;
+  border-radius: 50%;
+  background: #ffffff;
+  background: -moz-linear-gradient(left, #ccc 10%, rgba(255, 255, 255, 0) 42%);
+  background: -webkit-linear-gradient(
+    left,
+    #ccc 10%,
+    rgba(255, 255, 255, 0) 42%
+  );
+  background: -o-linear-gradient(left, #ccc 10%, rgba(255, 255, 255, 0) 42%);
+  background: -ms-linear-gradient(left, #ccc 10%, rgba(255, 255, 255, 0) 42%);
+  background: linear-gradient(to right, #ccc 10%, rgba(255, 255, 255, 0) 42%);
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader:before {
+  width: 50%;
+  height: 50%;
+  background: #ccc;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+}
+.loader:after {
+  background: #fff;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.collapsable-section {
+  width: 50%;
+  margin: auto;
+}
+.collapsable-text-section {
+  min-height: 50px;
+  margin: 20px;
+}
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .flex-row-sa {
+    flex-wrap: wrap;
+  }
+
+  .box-red,
+  .box-grey,
+  .box-green {
+    margin: 10px;
+  }
+
+  .page-heading {
+    flex-direction: column;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .select-label {
+    font-size: 12px;
+  }
+
+  .date {
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .w-50 {
+    width: 100%;
+  }
+
+  .collapsable-section {
+    width: 100%;
+  }
+
+  .collapsable-text-section {
+    min-height: 50px;
+    margin: 5px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .flex-row-sa {
+    flex-wrap: wrap;
+  }
+
+  .box-red,
+  .box-grey,
+  .box-green {
+    margin: 10px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .example {
+    background: blue;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example {
+    background: orange;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example {
+    background: pink;
   }
 }
