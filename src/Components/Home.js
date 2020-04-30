@@ -6,6 +6,7 @@ import {
   Switch,
   Redirect,
   withRouter,
+  HashRouter,
 } from "react-router-dom";
 
 import { connect } from "react-redux";
@@ -98,13 +99,15 @@ class Home extends Component {
                 marginTop: "30px",
               }}
             >
-              <Switch>
-                <Route exact path="/">
-                  <Redirect to="/world-tracker" />
-                </Route>
-                <Route exact path="/world-tracker" component={WorldTracker} />
-                <Route exact path="/india-tracker" component={IndiaTracker} />
-              </Switch>
+              <HashRouter basename="/">
+                <Switch>
+                  <Route exact path="/">
+                    <Redirect to="/world-tracker" />
+                  </Route>
+                  <Route exact path="/world-tracker" component={WorldTracker} />
+                  <Route exact path="/india-tracker" component={IndiaTracker} />
+                </Switch>
+              </HashRouter>
             </div>
           </Content>
           <Footer style={{ textAlign: "center" }}>
